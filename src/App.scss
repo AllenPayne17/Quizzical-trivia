@@ -1,3 +1,6 @@
+$textColor : #293264;
+$buttonColor : #4D5B9E;
+
 //general settings
 * {
   box-sizing: border-box;
@@ -17,18 +20,18 @@
   text-align: center;
 
   h1{
-    color:#293264;
+    color:$textColor;
     width: 700;
     padding-bottom: 10px;
   }
   p {
-    color: #293264;
+    color: $textColor;
     padding-bottom: 20px;
   }
   button {
     width: 195px;
     height: 50px;
-    background: #4D5B9E;
+    background: $buttonColor;
     color: #F5F7FB;
     border: none;
     border-radius: 10px;
@@ -47,7 +50,7 @@
     padding: 10px;
   
     p {
-      color: #293264;
+      color: $textColor;
       font-weight: 700;
       padding: 10px 0 10px 0;
     }
@@ -56,10 +59,15 @@
   
       button {
         margin: 0 5px 5px 0;
-        border: 1px solid #4D5B9E;
+        border: 1px solid $buttonColor;
         border-radius: 10px;
         padding: 5px 10px 5px 10px;
-        color: #293264;
+        color: $textColor;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover {
+          background: #9dacf7;
+        }
       }
     }
   }
@@ -79,7 +87,7 @@
     text-align: center;
 
     button {
-      background: #4D5B9E;
+      background: $buttonColor;
       border-radius: 10px;
       width: 120px;
       height: 35px;
