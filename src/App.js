@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes} from 'react-router-dom';
 import { Hero } from './components/Hero';
-import { Quizpage } from './components/Quizpage';
+import { Quiestions } from './components/Questions';
 import './App.scss';
 import axios from 'axios';
 
@@ -26,7 +26,7 @@ const App = () => {
     .map(({ value }) => value)
     
     return (
-      <Quizpage
+      <Quiestions
         key = {posts.indexOf(item)}
         question = {item.question}
         correctAnswer = {item.correct_answer}

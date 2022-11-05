@@ -6,7 +6,7 @@
   background-color: #F5F7FB;
 }
 
-.hero-title {
+.hero-page {
   
   position: absolute;
   left: 50%;
@@ -32,4 +32,37 @@
     border-radius: 10px;
     font-size: 16px;
   }
+}
+
+.question {
+
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+
+  p {
+    color: #293264;
+    font-weight: 700;
+    padding: 10px 0 10px 0;
+  }
+  .choices {
+    margin-bottom: 10px;
+
+    button {
+      margin-right: 15px;
+      border: 1px solid #4D5B9E;
+      border-radius: 10px;
+      padding: 5px 10px 5px 10px;
+      color: #293264;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .question {
+    width: 90%;
+  }
+
 }
