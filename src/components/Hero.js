@@ -8,7 +8,7 @@ export const Hero = () => {
         <img src="./logo.png" alt='' />
         <h1>Quizzical</h1>
         <p>Some description if needed</p>
-        <Link to="/questions">
+        <Link to="/quiz">
           <button classname="hero-btn">Start Quiz</button>
         </Link>
       </div>  

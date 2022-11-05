@@ -1,3 +1,4 @@
+//general settings
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +7,7 @@
   background-color: #F5F7FB;
 }
 
+//start of HERO components
 .hero-page {
   
   position: absolute;
@@ -33,36 +35,60 @@
     font-size: 16px;
   }
 }
+//end of Hero component
 
-.question {
-
-  margin: auto;
-  width: 60%;
-  padding: 10px;
-
-  p {
-    color: #293264;
-    font-weight: 700;
-    padding: 10px 0 10px 0;
+//start of Quizpage component
+.quiz-page {
+  margin: 30px 0 30px 0;
+  //start of child component (QUESTIONS)
+  .question {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+  
+    p {
+      color: #293264;
+      font-weight: 700;
+      padding: 10px 0 10px 0;
+    }
+    .choices {
+      margin-bottom: 10px;
+  
+      button {
+        margin: 0 5px 5px 0;
+        border: 1px solid #4D5B9E;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+        color: #293264;
+      }
+    }
   }
-  .choices {
-    margin-bottom: 10px;
+  @media only screen and (max-width: 992px) {
+    .question {
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .question {
+      width: 90%;
+    }
+  }
+  //end of Child component
+
+  .check-btn {
+    text-align: center;
 
     button {
-      margin-right: 15px;
-      border: 1px solid #4D5B9E;
+      background: #4D5B9E;
       border-radius: 10px;
-      padding: 5px 10px 5px 10px;
-      color: #293264;
+      width: 120px;
+      height: 35px;
+      border: none;
+      margin-top: 30px;
+      color: #F5F7FB;
     }
 
   }
-}
-
-@media only screen and (max-width: 768px) {
-
-  .question {
-    width: 90%;
-  }
 
 }
+//end of Quizpage component
