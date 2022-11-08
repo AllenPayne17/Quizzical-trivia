@@ -7,6 +7,7 @@ export const Quiz = () => {
     const [checked, setChecked] = useState(false)
     const [count, setCount] = useState(0)
     const [correct, setCorrect] = useState(0)
+    const [isready, setReady] = useState(false)
   
     const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5)
   
@@ -60,6 +61,7 @@ export const Quiz = () => {
       setQuestions(questions => questions.map(question => {
         return question.id === id ? {...question, selected: answer} : question
       }))
+      setReady(true)
     }
   
     function handlePlayAgain(){
@@ -82,10 +84,15 @@ export const Quiz = () => {
     return(
         <div className='quiz-container'>
             {questionList}
-        <div className='check-container'>
-            {checked && <span className='score'>You scored {correct}/5 correct answers</span>}  
-            <button className='check' onClick={checked ? handlePlayAgain : handleCheck}>{checked ? 'Play Again' : 'Check Answer'}</button>
-        </div>
+            {isready &&
+              <div className='check-container'>
+                {checked && <span className='score'>You scored {correct}/5 correct answers</span>}  
+                <button className='check' 
+                  onClick={checked ? handlePlayAgain : handleCheck}>
+                  {checked ? 'Play Again' : 'Check Answer'}
+                </button>
+              </div>
+            }
         </div>
     )
 
