@@ -2,7 +2,7 @@
 # Quizzical Trivia
 Quiz WebApp that access trivia questions from the [Open Trivia Database API](https://opentdb.com/api_config.php) and score players based on their answers.
 
-##### Live Demo: [Visit](allenpayne17.github.io/Quizzical-trivia/)
+##### Live Demo: [Visit](https://allenpayne17.github.io/Quizzical-trivia/)
 ## Built with:
 - HTML 5
 - Sass
