@@ -8,7 +8,7 @@ const App = () => {
   
   return (
     <Routes>
-        <Route path="/" element={<Menu />} />
+        <Route path="/Quizzical-trivia" element={<Menu />} />
         <Route path='/quiz' element={<Quiz />} />
     </Routes>
     );
