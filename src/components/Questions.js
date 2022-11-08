@@ -1,14 +1,41 @@
-export const Quiestions = (props) => {
+import React from "react";
+import '../App.scss';
+import { nanoid } from "nanoid";
+
+export const Questions = (props) => {
+    let answers = props.q.answers
+
+    function handleClick(answer) {
+        if(props.q.clicked){
+            return
+        }
+        props.handleClickAnswer(props.id, answer)
+    }
+
+    const answerList = answers.map(answer => {
+        let id = null
+        if (props.q.checked){
+            if (props.q.correct === answer){
+              id = 'correct'
+            }
+            else if(props.q.selected === answer){
+              id = 'incorrect'
+            }
+            else{
+              id = 'not-selected'
+            }
+          }
+        return(
+            <button key={nanoid()} id={id} className={answer === props.q.selected ? "answer selected" : "answer"} onClick={() => handleClick(answer)}>{atob(answer)}</button>
+        )
+    })
     return (
-    <div className="question">
-        <p>{props.question}</p>
-        <div className="choices">
-            <button>{props.choices[0]}</button>
-            <button>{props.choices[1]}</button>
-            <button>{props.choices[2]}</button>
-            <button>{props.choices[3]}</button>
+        <div className="question">
+            <p>{atob(props.q.question)}</p>
+            <div className="choices">
+                {answerList}
+            </div>
+            <hr/>
         </div>
-        <hr/>
-    </div>
     );
 }
